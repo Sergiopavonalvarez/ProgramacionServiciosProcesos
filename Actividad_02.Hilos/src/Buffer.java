@@ -15,7 +15,6 @@ public class Buffer {
 		// por lo que esperamos a que otro hilo ponga un elemento
 		while (cola.size() == 0) {
 			try {
-
 				wait();
 				// El método wait(), a diferencia del sleep(), el hilo no
 				// se despertara pasado un tiempo, sino que se despertará
