@@ -43,28 +43,36 @@ public class Servidor {
 			System.out.println("Introduce piedra papel o tijera");
 			Scanner sc = new Scanner(System.in);
 			String manoservidor = sc.nextLine();
+			
+			if (resultadocliente==3 || resultadoservidor==3) {
+				System.out.println("-----Resultado final-----");
+				System.out.println("Cliente: " + resultadocliente + "-" + "Servidor: " + resultadoservidor);
+				
+				socketAlCliente.close();
+				
+			}else {
 
 			switch (manocliente) {
 
 			case "piedra":
 				if (manoservidor.equalsIgnoreCase(tijera)) {
-					resultadoservidor = +1;
+					resultadoservidor = resultadoservidor+1;
 				}
 				if (manoservidor.equalsIgnoreCase(papel)) {
-					resultadocliente = +1;
+					resultadocliente = resultadocliente+1;
 				}
 				if (manoservidor.equalsIgnoreCase(piedra)) {
 
 				}
 			case "papel":
 				if (manoservidor.equalsIgnoreCase(tijera)) {
-					resultadocliente = +1;
+					resultadocliente =resultadocliente +1;
 				}
 				if (manoservidor.equalsIgnoreCase(papel)) {
 
 				}
 				if (manoservidor.equalsIgnoreCase(piedra)) {
-					resultadoservidor = +1;
+					resultadoservidor =resultadoservidor +1;
 
 				}
 			case "tijera":
@@ -72,17 +80,21 @@ public class Servidor {
 
 				}
 				if (manoservidor.equalsIgnoreCase(papel)) {
-					resultadocliente = +1;
+					resultadocliente =resultadocliente +1;
 				}
 				if (manoservidor.equalsIgnoreCase(piedra)) {
-					resultadoservidor = +1;
+					resultadoservidor = resultadoservidor+1;
 				}
+				
+				salida = new PrintStream(socketAlCliente.getOutputStream());
+				salida.println("Cliente: " + resultadocliente + "-" + "Servidor: " + resultadoservidor);
 			}
-			salida = new PrintStream(socketAlCliente.getOutputStream());
-			salida.println("Cliente: " + resultadocliente + "-" + "Servidor: " + resultadoservidor);
+
+			
+			}
 
 		}
-		// socketAlCliente.close();
+		// 
 
 	}
 }
