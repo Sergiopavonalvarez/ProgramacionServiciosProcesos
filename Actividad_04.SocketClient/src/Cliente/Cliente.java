@@ -30,15 +30,15 @@ public class Cliente {
 
 			String mano = sc.nextLine();
 
-			String operandos = mano;// 3-4
+			String operandos = mano;
 
 			PrintStream salida = new PrintStream(socketAlServidor.getOutputStream());
-			salida.println(operandos);// 3-4
+			salida.println(operandos);
 			InputStreamReader entrada = new InputStreamReader(socketAlServidor.getInputStream());
 			BufferedReader bf = new BufferedReader(entrada);
 			System.out.println("CLIENTE: Esperando al resultado del servidor...");
 			String resultado = bf.readLine();
-			System.out.println("CLIENTE: El resultado de la operacion es: " + resultado);// 7
+			System.out.println(resultado);
 
 		}
 	}

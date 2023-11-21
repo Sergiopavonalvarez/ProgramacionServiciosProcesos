@@ -34,8 +34,11 @@ public class Servidor {
 		String tijera = "tijera";
 		int resultadocliente = 0;
 		int resultadoservidor = 0;
+		int contador = 0;
 
 		while (true) {
+
+			contador = contador + 1;
 
 			BufferedReader bf = new BufferedReader(entrada);
 			String manocliente = bf.readLine();
@@ -43,58 +46,96 @@ public class Servidor {
 			System.out.println("Introduce piedra papel o tijera");
 			Scanner sc = new Scanner(System.in);
 			String manoservidor = sc.nextLine();
-			
-			if (resultadocliente==3 || resultadoservidor==3) {
-				System.out.println("-----Resultado final-----");
-				System.out.println("Cliente: " + resultadocliente + "-" + "Servidor: " + resultadoservidor);
-				
-				socketAlCliente.close();
-				
-			}else {
 
-			switch (manocliente) {
+			if (contador == 3) {
 
-			case "piedra":
-				if (manoservidor.equalsIgnoreCase(tijera)) {
-					resultadoservidor = resultadoservidor+1;
-				}
-				if (manoservidor.equalsIgnoreCase(papel)) {
-					resultadocliente = resultadocliente+1;
-				}
-				if (manoservidor.equalsIgnoreCase(piedra)) {
+				switch (manocliente) {
+
+				case "piedra":
+					if (manoservidor.equalsIgnoreCase(tijera)) {
+						resultadoservidor = resultadoservidor + 1;
+					}
+					if (manoservidor.equalsIgnoreCase(papel)) {
+						resultadocliente = resultadocliente + 1;
+					}
+					if (manoservidor.equalsIgnoreCase(piedra)) {
+
+					}
+				case "papel":
+					if (manoservidor.equalsIgnoreCase(tijera)) {
+						resultadocliente = resultadocliente + 1;
+					}
+					if (manoservidor.equalsIgnoreCase(papel)) {
+
+					}
+					if (manoservidor.equalsIgnoreCase(piedra)) {
+						resultadoservidor = resultadoservidor + 1;
+
+					}
+				case "tijera":
+					if (manoservidor.equalsIgnoreCase(tijera)) {
+
+					}
+					if (manoservidor.equalsIgnoreCase(papel)) {
+						resultadocliente = resultadocliente + 1;
+					}
+					if (manoservidor.equalsIgnoreCase(piedra)) {
+						resultadoservidor = resultadoservidor + 1;
+					}
+
+					salida = new PrintStream(socketAlCliente.getOutputStream());
+
+					salida.println("El servidor introdujo " + manoservidor + "**| RESULTADO FINAL |**  Cliente: "
+							+ resultadocliente + "-" + "Servidor: " + resultadoservidor + "|");
+
+					socketAlCliente.close();
 
 				}
-			case "papel":
-				if (manoservidor.equalsIgnoreCase(tijera)) {
-					resultadocliente =resultadocliente +1;
-				}
-				if (manoservidor.equalsIgnoreCase(papel)) {
 
-				}
-				if (manoservidor.equalsIgnoreCase(piedra)) {
-					resultadoservidor =resultadoservidor +1;
+			} else {
 
-				}
-			case "tijera":
-				if (manoservidor.equalsIgnoreCase(tijera)) {
+				switch (manocliente) {
 
-				}
-				if (manoservidor.equalsIgnoreCase(papel)) {
-					resultadocliente =resultadocliente +1;
-				}
-				if (manoservidor.equalsIgnoreCase(piedra)) {
-					resultadoservidor = resultadoservidor+1;
-				}
-				
-				salida = new PrintStream(socketAlCliente.getOutputStream());
-				salida.println("Cliente: " + resultadocliente + "-" + "Servidor: " + resultadoservidor);
-			}
+				case "piedra":
+					if (manoservidor.equalsIgnoreCase(tijera)) {
+						resultadoservidor = resultadoservidor + 1;
+					}
+					if (manoservidor.equalsIgnoreCase(papel)) {
+						resultadocliente = resultadocliente + 1;
+					}
+					if (manoservidor.equalsIgnoreCase(piedra)) {
 
-			
+					}
+				case "papel":
+					if (manoservidor.equalsIgnoreCase(tijera)) {
+						resultadocliente = resultadocliente + 1;
+					}
+					if (manoservidor.equalsIgnoreCase(papel)) {
+
+					}
+					if (manoservidor.equalsIgnoreCase(piedra)) {
+						resultadoservidor = resultadoservidor + 1;
+
+					}
+				case "tijera":
+					if (manoservidor.equalsIgnoreCase(tijera)) {
+
+					}
+					if (manoservidor.equalsIgnoreCase(papel)) {
+						resultadocliente = resultadocliente + 1;
+					}
+					if (manoservidor.equalsIgnoreCase(piedra)) {
+						resultadoservidor = resultadoservidor + 1;
+					}
+
+					salida = new PrintStream(socketAlCliente.getOutputStream());
+					salida.println("El servidor introdujo " + manoservidor + "| Cliente: " + resultadocliente + "-"
+							+ "Servidor: " + resultadoservidor + "|");
+				}
+
 			}
 
 		}
-		// 
 
 	}
 }
