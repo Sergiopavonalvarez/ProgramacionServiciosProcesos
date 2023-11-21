@@ -48,8 +48,9 @@ public class HiloContadorLetras implements Runnable{
 				texto = entradaBuffer.readLine();
 				//trim() es un metodo que quita los espacios en blanco del principio
 				//y del final
+				//trim quita los espacios del laterales
 				if (texto.trim().equalsIgnoreCase("FIN")) {
-					//Mandamos la señal de "0" para que el cliente sepa que vamos a cortar
+					//Mandamos la seï¿½al de "0" para que el cliente sepa que vamos a cortar
 					//la comunicacion
 					salida.println("OK");
 					System.out.println(hilo.getName() + " ha cerrado la comunicacion");
