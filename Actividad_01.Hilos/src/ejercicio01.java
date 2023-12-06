@@ -11,40 +11,34 @@ public class ejercicio01 extends Thread {
 	}
 
 	public void run() {
-		
+
 		long inicio = System.currentTimeMillis();
-		
 
 		if (esPrimo(numeroprimo)) {
-
 
 			System.out.println("Arrancando hilo: " + Thread.currentThread().getName() + " ----> el " + numeroprimo
 					+ " es un número primo");
 			long fin1 = System.currentTimeMillis();
-			long resultado =fin1-inicio;
-			System.out.println("El hilo "+Thread.currentThread().getName()+" ha tardado "+resultado+" milisegundos");
-
-			
-
+			long resultado = fin1 - inicio;
+			System.out.println(
+					"El hilo " + Thread.currentThread().getName() + " ha tardado " + resultado + " milisegundos");
 
 		} else {
-			
 
 			System.out.println("Arrancando hilo: " + Thread.currentThread().getName() + " ----> el " + numeroprimo
 					+ " no es un número primo. ");
-			
+
 			long fin1 = System.currentTimeMillis();
-			long resultado =fin1-inicio;
-			System.out.println("El hilo "+Thread.currentThread().getName()+" ha tardado "+resultado+" milisegundos");
-
-
+			long resultado = fin1 - inicio;
+			System.out.println(
+					"El hilo " + Thread.currentThread().getName() + " ha tardado " + resultado + " milisegundos");
 
 		}
 
 	}
 
 	public static boolean esPrimo(long numero) {
-		
+
 		if (numero <= 1) {
 			return false;
 		}
@@ -60,9 +54,6 @@ public class ejercicio01 extends Thread {
 				return false;
 			}
 		}
-		
-
-
 
 		return true;
 	}

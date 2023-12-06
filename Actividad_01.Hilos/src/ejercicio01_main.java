@@ -23,9 +23,7 @@ public class ejercicio01_main {
 		hilo3.setName("Hilo 3");
 
 		hilo1.start();
-
 		hilo2.start();
-
 		hilo3.start();
 
 	}
