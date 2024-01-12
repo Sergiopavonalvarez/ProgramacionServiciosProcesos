@@ -1,0 +1,74 @@
+{"ordenador": {
+    "nombre": "Flameador 2024",
+    "precio": "1900",
+    "Perifericos":[
+        {"teclado":{
+            "nombre":"Flaming pro eco 2",
+            "marca":"Flamer Gaming SL"
+        }},
+        {"raton":{
+            "nombre":"Insultating pro 1",
+            "marca":"Flamer Gaming SL"
+        }}
+    ],
+    "Componentes":[
+        {"monitor":{
+            "nombre":"4K feeder pro-max",
+            "marca":"Rager",
+            "resolution":"2160p"
+        }},
+        {"placa_base":{
+            "modelo":"B470",
+            "marca":"Rager",
+            "resolution":"2160p"
+        }},
+        {"ram":{
+            "modulo1":[
+                {"id":"1",
+                "marca":"Flaming",
+                "tipo":"DDR",
+                "capacidad":"8GB"
+            }],
+            "modulo2":[
+                {"id":"2",
+                "marca":"Flaming",
+                "tipo":"DDR",
+                "capacidad":"8GB"
+            }]
+        }},
+        {"procesador":{
+            "marca":"Maker",
+            "modelo":"i9.5",
+            "velocidad":"5GHZ"
+        }},
+        {"discos_duros":{
+            "disco_duro1":[{
+                "id":"1",
+                "marca":"Maker",
+                "tipo":"HDD",
+                "capacidad":"2TB"
+            }],
+            "disco_duro2":[{
+                "id":"2",
+                "marca":"Maker",
+                "tipo":"HDD",
+                "capacidad":"500GB"
+            }]
+        }},
+        {"fuente_alimentacion":{
+            "marca":"Maker",
+            "modelo":"ATX",
+            "potencia":{
+                "valor":"750",
+                "unidad":"KW"
+            }
+        }},
+        {"tarjeta_grafica":{
+            "marca":"iManoob",
+            "modelo":"4080",
+            "precio":"2 bitcoins",
+            "potencia":"Trillon cudas"
+        }}
+    ]
+}
+}
