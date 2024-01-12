@@ -1,6 +1,6 @@
 package objetos;
 
-public class Bebe extends Persona{
+public class Bebe extends Persona {
 	private boolean llorando;
 
 	public boolean isLlorando() {
@@ -10,6 +10,5 @@ public class Bebe extends Persona{
 	public void setLlorando(boolean llorando) {
 		this.llorando = llorando;
 	}
-	
-	
+
 }

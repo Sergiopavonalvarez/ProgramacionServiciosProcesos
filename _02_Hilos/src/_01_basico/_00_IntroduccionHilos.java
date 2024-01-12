@@ -13,6 +13,7 @@ public class _00_IntroduccionHilos {
 				Thread.sleep(500);//
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
+				// Manejo de la excepción si ocurre un problema al dormir el hilo
 				e.printStackTrace();
 			}
 			//imprimimos en cada iteración del hilo la variable de control de bucle
