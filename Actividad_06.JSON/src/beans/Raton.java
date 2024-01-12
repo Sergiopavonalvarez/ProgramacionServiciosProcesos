@@ -20,6 +20,12 @@ public class Raton {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
+	@Override
+	public String toString() {
+		return "Raton [nombre=" + nombre + ", marca=" + marca + "]";
+	}
+	
+	
 	
 	
 

@@ -7,7 +7,7 @@ public class Ordenador {
 	
 	private String nombre;
 	private String precio;
-	private Componentes [] componentes;
+	private ArrayList <Componentes> componentes;
 	private ArrayList <Perifericos> perifericos;
 	
 	
@@ -15,7 +15,7 @@ public class Ordenador {
 		
 	}
 	
-	public Ordenador(String nombre, String precio, ArrayList<Perifericos> perifericos, Componentes[] componentes) {
+	public Ordenador(String nombre, String precio, ArrayList<Perifericos> perifericos, ArrayList<Componentes> componentes) {
 		super();
 		this.nombre = nombre;
 		this.precio = precio;
@@ -47,20 +47,27 @@ public class Ordenador {
 		this.perifericos = perifericos;
 	}
 
-	public Componentes[] getComponentes() {
+	public ArrayList<Componentes> getComponentes() {
 		return componentes;
 	}
 
-	public void setComponentes(Componentes[] componentes) {
+	public void setComponentes(ArrayList<Componentes> componentes) {
 		this.componentes = componentes;
 	}
 
 	@Override
 	public String toString() {
-		return "Ordenador [nombre=" + nombre + ", precio=" + precio + ", componentes=" + Arrays.toString(componentes)
-				+ ", perifericos=" + "]";
+		return "Ordenador [nombre=" + nombre + ", precio=" + precio + ", componentes=" + componentes + ", perifericos="
+				+ perifericos + "]";
 	}
 	
+	
+
+
+	
+	
+
+
 	
 
 

@@ -26,6 +26,10 @@ public class Perifericos {
 	public void setRaton(Raton raton) {
 		this.raton = raton;
 	}
+	@Override
+	public String toString() {
+		return "Perifericos [teclado=" + teclado + ", raton=" + raton + "]";
+	}
 	
 	
 	
