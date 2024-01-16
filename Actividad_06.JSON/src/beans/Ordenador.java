@@ -4,19 +4,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Ordenador {
-	
+
 	private String nombre;
 	private String precio;
-	private ArrayList <Perifericos> perifericos;
-	private ArrayList <Componentes> componentes;
-	
-	
-	
+	private ArrayList<Perifericos> perifericos;
+	private ArrayList<Componentes> componentes;
+
 	public Ordenador() {
-		
+
 	}
-	
-	public Ordenador(String nombre, String precio, ArrayList<Perifericos> perifericos, ArrayList<Componentes> componentes) {
+
+	public Ordenador(String nombre, String precio, ArrayList<Perifericos> perifericos,
+			ArrayList<Componentes> componentes) {
 		super();
 		this.nombre = nombre;
 		this.precio = precio;
@@ -61,29 +60,5 @@ public class Ordenador {
 		return "Ordenador [nombre=" + nombre + ", precio=" + precio + ", componentes=" + componentes + ", perifericos="
 				+ perifericos + "]";
 	}
-	
-	
-
-
-	
-	
-
-
-	
-
-
-	
-	
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
