@@ -29,6 +29,10 @@ public class Procesador {
 	public void setVelocidad(String velocidad) {
 		this.velocidad = velocidad;
 	}
+	@Override
+	public String toString() {
+		return "Procesador [marca=" + marca + ", modelo=" + modelo + ", velocidad=" + velocidad + "]";
+	}
 	
 	
 

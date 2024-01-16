@@ -38,6 +38,10 @@ public class Discos_Duros {
 	public void setCapacidad(String capacidad) {
 		this.capacidad = capacidad;
 	}
+	@Override
+	public String toString() {
+		return "Discos_Duros [id=" + id + ", marca=" + marca + ", tipo=" + tipo + ", capacidad=" + capacidad + "]";
+	}
 	
 	
 

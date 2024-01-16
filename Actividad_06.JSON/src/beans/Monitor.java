@@ -31,6 +31,10 @@ public class Monitor {
 	public void setResolution(String resolution) {
 		this.resolution = resolution;
 	}
+	@Override
+	public String toString() {
+		return "Monitor [nombre=" + nombre + ", marca=" + marca + ", resolution=" + resolution + "]";
+	}
 	
 	
 

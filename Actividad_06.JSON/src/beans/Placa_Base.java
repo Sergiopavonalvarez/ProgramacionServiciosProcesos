@@ -29,6 +29,10 @@ public class Placa_Base {
 	public void setResolution(String resolution) {
 		this.resolution = resolution;
 	}
+	@Override
+	public String toString() {
+		return "Placa_Base [modelo=" + modelo + ", marca=" + marca + ", resolution=" + resolution + "]";
+	}
 	
 	
 

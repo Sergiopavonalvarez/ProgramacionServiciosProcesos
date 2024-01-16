@@ -37,6 +37,10 @@ public class Ram {
 	public void setCapacidad(String capacidad) {
 		this.capacidad = capacidad;
 	}
+	@Override
+	public String toString() {
+		return "Ram [id=" + id + ", marca=" + marca + ", tipo=" + tipo + ", capacidad=" + capacidad + "]";
+	}
 	
 	
 

@@ -37,6 +37,11 @@ public class Tarjeta_Grafica {
 	public void setPotencia(String potencia) {
 		this.potencia = potencia;
 	}
+	@Override
+	public String toString() {
+		return "Tarjeta_Grafica [marca=" + marca + ", modelo=" + modelo + ", precio=" + precio + ", potencia="
+				+ potencia + "]";
+	}
 	
 	
 

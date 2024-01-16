@@ -1,5 +1,7 @@
 package beans;
 
+import java.util.Arrays;
+
 public class Fuente_Alimentacion {
 	String marca;
 	String modelo;
@@ -28,6 +30,11 @@ public class Fuente_Alimentacion {
 	}
 	public void setPotencia(String[] potencia) {
 		this.potencia = potencia;
+	}
+	@Override
+	public String toString() {
+		return "Fuente_Alimentacion [marca=" + marca + ", modelo=" + modelo + ", potencia=" + Arrays.toString(potencia)
+				+ "]";
 	}
 	
 	

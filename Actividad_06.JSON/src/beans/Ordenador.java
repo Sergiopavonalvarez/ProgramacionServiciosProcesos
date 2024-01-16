@@ -7,8 +7,9 @@ public class Ordenador {
 	
 	private String nombre;
 	private String precio;
-	private ArrayList <Componentes> componentes;
 	private ArrayList <Perifericos> perifericos;
+	private ArrayList <Componentes> componentes;
+	
 	
 	
 	public Ordenador() {

@@ -1,4 +1,4 @@
-{"ordenador": {
+[ {
     "nombre": "Flameador 2024",
     "precio": "1900",
     "Perifericos":[
@@ -71,4 +71,4 @@
         }}
     ]
 }
-}
+]

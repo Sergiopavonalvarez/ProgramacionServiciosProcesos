@@ -6,11 +6,28 @@ import java.util.Arrays;
 public class Componentes {
 	Monitor monitor;
 	Placa_Base placa_base;
-	ArrayList <Ram> [] ram;
+	ArrayList <Ram>  ram;
 	Procesador procesador;
 	ArrayList <Discos_Duros> discos_duros;
 	Fuente_Alimentacion fuente_alimentacion;
 	Tarjeta_Grafica tarjeta_grafica;
+	
+	
+	
+	
+	
+	public Componentes(Monitor monitor, Placa_Base placa_base, ArrayList<Ram> ram, Procesador procesador,
+			ArrayList<Discos_Duros> discos_duros, Fuente_Alimentacion fuente_alimentacion,
+			Tarjeta_Grafica tarjeta_grafica) {
+		super();
+		this.monitor = monitor;
+		this.placa_base = placa_base;
+		this.ram = ram;
+		this.procesador = procesador;
+		this.discos_duros = discos_duros;
+		this.fuente_alimentacion = fuente_alimentacion;
+		this.tarjeta_grafica = tarjeta_grafica;
+	}
 	public Monitor getMonitor() {
 		return monitor;
 	}
@@ -23,10 +40,10 @@ public class Componentes {
 	public void setPlaca_base(Placa_Base placa_base) {
 		this.placa_base = placa_base;
 	}
-	public ArrayList<Ram>[] getRam() {
+	public ArrayList<Ram> getRam() {
 		return ram;
 	}
-	public void setRam(ArrayList<Ram>[] ram) {
+	public void setRam(ArrayList<Ram> ram) {
 		this.ram = ram;
 	}
 	public Procesador getProcesador() {
@@ -55,11 +72,13 @@ public class Componentes {
 	}
 	@Override
 	public String toString() {
-		return "Componentes [monitor=" + monitor + ", placa_base=" + placa_base + ", ram=" + Arrays.toString(ram)
-				+ ", procesador=" + procesador + ", discos_duros=" + discos_duros + ", fuente_alimentacion="
-				+ fuente_alimentacion + ", tarjeta_grafica=" + tarjeta_grafica + "]";
+		return "Componentes [monitor=" + monitor + ", placa_base=" + placa_base + ", ram=" + ram + ", procesador="
+				+ procesador + ", discos_duros=" + discos_duros + ", fuente_alimentacion=" + fuente_alimentacion
+				+ ", tarjeta_grafica=" + tarjeta_grafica + "]";
 	}
 	
+	
+
 	
 	
 	
